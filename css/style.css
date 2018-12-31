@@ -1,0 +1,476 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(43, 42, 37) ;
+    color: #ffffff;
+    height: 100%;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+
+}
+
+ .overlay {
+    position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+
+
+/*.bg-img {
+    background: rgb(70, 68, 68) ;
+    background-image: url("../img/desktop.jpeg");
+    background-blend-mode: overlay; 
+}
+*/
+
+  /* heading */
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+h1.lg-heading {
+    font-size: 6rem;
+}
+
+h2.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background-blend-mode: lighten;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.secondary-text {
+    color: #eece1a;
+}
+
+main {
+    padding: 4rem;
+    min-height: calc(100vh - 60px);
+}
+
+.icons {
+    border: 1px solid transparent;
+    margin-top: 1rem;
+    margin-left: 15vh;
+}
+
+main#home {
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 25vh;
+    margin-left: 15vh;
+}
+
+#about h1, #work h1 {
+    margin-top: 10vh;
+}
+
+h2 {
+    margin-left: 14vh;
+}
+
+#about h2, #work h2 {
+    margin-left: 14vh;
+}
+
+a {
+    padding: 0.4rem;
+}
+
+a:hover {
+    color: #eece1a;
+    transition: all 0.5s ease-out;
+}
+
+#footer {
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(240, 219, 30, 0.5));
+    color: rgb(17, 16, 16);
+    height: 60px;
+    padding: 1rem;
+}
+
+
+.menubtn {
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.btn-line {
+   width: 28px;
+   height: 3px;
+   margin: 0 0 5px 0;
+   background: white;
+   transition: all 0.5s ease-out; 
+}
+
+/* rotate into K with Menu Lines */
+.close {
+    transform: rotate(180deg);
+}
+
+/* add an after button on top of them and change them on click using js
+/* line one - back */
+.close 
+    .btn-line:nth-child(1) {
+        transform: scale(0.7) rotate(35deg) translate(7px, 3px);
+        background: #eece1a;
+   }
+
+/* line tow - up stroke */ 
+.close 
+    .btn-line:nth-child(2) {
+    transform: rotate(90deg) translate(5px, -11px);
+    background: #eece1a;
+   }
+
+/* line there - down stroke */
+.close 
+    .btn-line:nth-child(3) {
+    transform: scale(0.7) rotate(-45deg) translate(5px, 2px);
+    background: #eece1a;
+   }
+
+
+/* about page */
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'heading heading heading'
+    'skill1 skill2 skill3';
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* nav section */
+
+#navbar {
+    width: 0;
+    height: 100vh;
+    background: #221e06;
+    opacity: 0.8;
+    border: 1px solid transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+}
+
+
+ul {
+    display: block;
+    border: 1px solid transparent;
+    position: inherit;
+    margin-top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50%;
+    list-style: none;
+    width: 15rem;
+    padding: 1rem;
+    min-width: 15rem;
+}
+
+li {
+    padding: 2rem 1rem;
+    display: block;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white;
+}
+
+.current {
+    color: #eece1a;
+}
+
+
+
+/* about section */
+
+.heading {
+   grid-area: heading;
+   margin: auto;
+}
+
+.bio {
+    background: #444;
+    padding: 1rem;
+    border-bottom: 1px solid #eece1a;
+    box-shadow:10px 10px 50px #eece1a69, -10px -10px 50px #eece1a69;
+}
+
+.skill-1 {
+    grid-area: skill1;
+    font-size: 1.5rem; 
+}
+.skill-2 {
+    grid-area: skill2;
+    font-size: 1.5rem; 
+}
+.skill-3 {
+    grid-area: skill3;
+    font-size: 1.5rem; 
+}
+
+.skill {
+    background: #444;
+    padding: 0.5rem;
+    border-bottom: 5px solid #eece1a;
+    box-shadow:10px 10px 50px #eece1a69, -10px -10px 50px #eece1a69;
+}
+
+/* contact page */
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.boxes div {
+    font-size: 2rem;
+    border: 3px solid #ffffff;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.5s ease-out;
+}
+
+.boxes div:hover {
+    padding: 0.5rem 1.5rem;
+    background-color: #eece1a;
+    color: #221e06;
+
+}
+
+.text-secondary {
+    font-family: Georgia, Courier, Helvetica, serif;
+    font-weight: 600;
+    color: inherit;
+}
+
+
+/* work grid*/ 
+
+.projects {
+    display: flex;
+}
+
+
+
+.projects img {
+    width: 31vh;
+    border: 3px #fff solid;
+
+}
+
+.projects img:hover {
+    opacity: 0.5;
+    border-color: #eece1a;
+    transition: all 0.5s ease-out;
+}
+
+/* button style */
+
+.btn-light {
+    background: #444;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    border: 1px solid #eece1a;
+    width: inherit;
+}
+
+.btn-light:hover {
+    background: #eece1a;
+    color: #444;
+}
+
+
+.btn-dark {
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    border: 1px solid #eece1a;
+    width: inherit;
+}
+
+.btn-dark:hover {
+    background: #eece1a;
+    color: #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*smartphone*/
+@media screen and (max-width: 500px) {
+    main h1 {
+        margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .icons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .projects {
+        display: block;
+        
+    }
+
+    .btn-light {
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+
+    .btn-dark {
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+
+}
+
+/*tablets*/
+@media screen and (max-width: 768px) {
+    main {
+        align-items: center;
+        text-align: center;
+    }
+
+    main h1 {
+        margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about h1, #work h1 {
+        margin-top: 10vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    main h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #about h2, #work h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .icons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+
+    .lg-heading {
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    .about-info {
+        grid-template-areas:
+        'heading'
+        'skill1'
+        'skill2'
+        'skill3';
+
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: repeat(1. 1fr);
+    }
+
+}
+
+/*desktops*/
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+    .projects {
+        grid-template-columns: repeat(1. 1fr);
+    }
+}
+
+/*widescreens*/
+@media screen and (max-width: 1171px) {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
