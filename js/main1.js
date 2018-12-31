@@ -13,7 +13,7 @@ menuBtn.addEventListener('click', toggleMenu);
 function toggleMenu() {
     if (!showMenu) {
         menuBtn.classList.add('close');
-        document.getElementById('navbar').style.width = '40%';
+        document.getElementById('navbar').style.width = '45%';
 
 
 
