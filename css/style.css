@@ -373,14 +373,14 @@ li {
 @media screen and (max-width: 500px) {
     main h1 {
         margin-top: 10vh;
-        margin-left: 50%;
-        margin-right: 50%;
-        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 4rem;
     }
 
     main h2 {
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .icons {
@@ -405,7 +405,7 @@ li {
     
     .boxes div {
         overflow: hidden;
-        padding: 0.3;
+        width: 70%;
 
 }
 
@@ -418,24 +418,25 @@ li {
 
     main h1 {
         margin-top: 10vh;
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 4rem;
     }
 
     #about h1, #work h1 {
         margin-top: 10vh;
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     main h2 {
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #about h2, #work h2 {
-        margin-left: 50%;
-        margin-right: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .icons {
