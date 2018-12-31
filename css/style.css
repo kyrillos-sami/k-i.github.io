@@ -371,14 +371,14 @@ li {
 
 /*smartphone*/
 @media screen and (max-width: 500px) {
-    main h1 {
+    h1 {
         margin-top: 10vh;
-        margin-left: auto;
+        margin-left: 40%;
         margin-right: auto;
         font-size: 4rem;
     }
 
-    main h2 {
+    h2 {
         margin-left: auto;
         margin-right: auto;
     }
@@ -405,7 +405,11 @@ li {
     
     .boxes div {
         overflow: hidden;
-        width: 70%;
+        margin-left: 20%
+    }
+    
+    li {
+        font-size: 25px;
 
 }
 
@@ -416,9 +420,9 @@ li {
         text-align: center;
     }
 
-    main h1 {
+    h1 {
         margin-top: 10vh;
-        margin-left: auto;
+        margin-left: 40%;
         margin-right: auto;
         font-size: 4rem;
     }
@@ -429,7 +433,7 @@ li {
         margin-right: auto;
     }
 
-    main h2 {
+   h2 {
         margin-left: auto;
         margin-right: auto;
     }
